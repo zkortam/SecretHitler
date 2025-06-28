@@ -31,4 +31,5 @@ jobs:
           GIT_AUTHOR_EMAIL: github-actions@github.com
           GIT_COMMITTER_NAME: github-actions
           GIT_COMMITTER_EMAIL: github-actions@github.com
+          REPO: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/zkortam/SecretHitler.git
         run: npm run deploy 
