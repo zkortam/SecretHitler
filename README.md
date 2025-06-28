@@ -170,4 +170,4 @@ MIT License - see LICENSE file for details
 ## Acknowledgments
 
 - Based on the board game "Secret Hitler" by Goat, Wolf, & Cabbage
-- Built with modern web technologies for the best gaming experience 
+- Built with modern web technologies for the best gaming experience
