@@ -17,9 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -39,9 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001",
-  "homepage": "https://zkortam.github.io/SecretHitler/",
-  "devDependencies": {
-    "gh-pages": "^6.0.0"
-  }
+  "proxy": "http://localhost:3001"
 } 
