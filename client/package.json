@@ -40,7 +40,7 @@
     ]
   },
   "proxy": "http://localhost:3001",
-  "homepage": "https://zkortam.github.io/SecretHitler",
+  "homepage": "https://zkortam.github.io/SecretHitler/",
   "devDependencies": {
     "gh-pages": "^6.0.0"
   }
