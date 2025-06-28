@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Colors, Shadows, BorderRadius, Typography, Spacing } from '../styles/designSystem';
+import { Colors, Shadows, BorderRadius, Typography, Spacing, Transitions } from '../styles/designSystem';
 import PolicyBoard from './PolicyBoard';
 import PlayerList from './PlayerList';
 import VotingPhase from './VotingPhase';
