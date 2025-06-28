@@ -148,6 +148,20 @@ const Button = styled.button`
   box-shadow: ${Shadows.medium};
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.md} ${Spacing.lg};
+    font-size: 1.2rem;
+    margin: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm} ${Spacing.md};
+    font-size: 1.1rem;
+    margin: ${Spacing.sm};
+    width: 100%;
+    max-width: 300px;
+  }
 
   &::before {
     content: '';

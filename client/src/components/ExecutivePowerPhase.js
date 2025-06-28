@@ -13,6 +13,14 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    padding: ${Spacing.lg};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.md};
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -31,6 +39,15 @@ const Title = styled.h2`
   font-size: 1.8rem;
   font-weight: 700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const Description = styled.p`
@@ -39,6 +56,16 @@ const Description = styled.p`
   margin-bottom: ${Spacing.lg};
   opacity: 0.9;
   line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    margin-bottom: ${Spacing.sm};
+  }
 `;
 
 const PowerGrid = styled.div`
@@ -46,6 +73,18 @@ const PowerGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: ${Spacing.lg};
   margin: ${Spacing.lg} 0;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: ${Spacing.md};
+    margin: ${Spacing.md} 0;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: ${Spacing.sm};
+    margin: ${Spacing.sm} 0;
+  }
 `;
 
 const PowerCard = styled.div`
@@ -58,11 +97,23 @@ const PowerCard = styled.div`
   position: relative;
   overflow: hidden;
   box-shadow: ${props => props.selected ? Shadows.glow : Shadows.medium};
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+  }
 
   &:hover {
     transform: translateY(-3px);
     box-shadow: ${Shadows.large};
     border-color: ${Colors.primary};
+    
+    @media (max-width: 480px) {
+      transform: translateY(-1px);
+    }
   }
   
   &::before {
@@ -96,6 +147,15 @@ const PowerTitle = styled.h3`
   margin-bottom: ${Spacing.sm};
   font-size: 1.3rem;
   font-weight: 700;
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: ${Spacing.xs};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const PowerDescription = styled.p`
@@ -104,6 +164,16 @@ const PowerDescription = styled.p`
   opacity: 0.9;
   margin-bottom: ${Spacing.md};
   line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    margin-bottom: ${Spacing.xs};
+  }
 `;
 
 const PlayerSelection = styled.div`
@@ -112,6 +182,16 @@ const PlayerSelection = styled.div`
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
   border-radius: ${BorderRadius.medium};
   border: 1px solid ${Colors.glassBorder};
+  
+  @media (max-width: 768px) {
+    margin-top: ${Spacing.md};
+    padding: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    margin-top: ${Spacing.sm};
+    padding: ${Spacing.sm};
+  }
 `;
 
 const PlayerSelectionTitle = styled.h4`
@@ -120,6 +200,16 @@ const PlayerSelectionTitle = styled.h4`
   margin-bottom: ${Spacing.md};
   color: ${Colors.primary};
   font-weight: 700;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    margin-bottom: ${Spacing.xs};
+  }
 `;
 
 const PlayerGrid = styled.div`
@@ -127,6 +217,18 @@ const PlayerGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: ${Spacing.sm};
   margin: ${Spacing.md} 0;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: ${Spacing.xs};
+    margin: ${Spacing.sm} 0;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: ${Spacing.xs};
+    margin: ${Spacing.xs} 0;
+  }
 `;
 
 const PlayerItem = styled.div`
@@ -141,11 +243,29 @@ const PlayerItem = styled.div`
   border: 2px solid ${props => props.selected ? Colors.primary : 'transparent'};
   font-family: ${Typography.body};
   font-weight: 600;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.sm};
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+    font-size: 0.9rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &:hover {
     transform: translateY(-2px);
     box-shadow: ${Shadows.medium};
     background: rgba(255, 255, 255, 0.1);
+    
+    @media (max-width: 480px) {
+      transform: translateY(-1px);
+    }
   }
 `;
 
@@ -163,6 +283,18 @@ const UseButton = styled.button`
   box-shadow: ${Shadows.medium};
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.sm} ${Spacing.lg};
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm} ${Spacing.md};
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
 
   &::before {
     content: '';
@@ -205,6 +337,16 @@ const ResultDisplay = styled.div`
   position: relative;
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    padding: ${Spacing.md};
+    margin: ${Spacing.sm} 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+    margin: ${Spacing.xs} 0;
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -222,6 +364,14 @@ const ResultText = styled.p`
   font-weight: 600;
   color: ${Colors.primary};
   margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 `;
 
 const EmptyState = styled.div`
@@ -229,6 +379,16 @@ const EmptyState = styled.div`
   font-size: 1.1rem;
   opacity: 0.8;
   padding: ${Spacing.lg};
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: ${Spacing.sm};
+  }
 `;
 
 const ExecutivePowerPhase = ({ powers, players, onUsePower, powerResult }) => {
