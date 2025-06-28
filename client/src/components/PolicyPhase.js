@@ -13,6 +13,14 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    padding: ${Spacing.lg};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.md};
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -31,6 +39,15 @@ const Title = styled.h2`
   font-size: 1.8rem;
   font-weight: 700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const Description = styled.p`
@@ -39,6 +56,16 @@ const Description = styled.p`
   margin-bottom: ${Spacing.lg};
   opacity: 0.9;
   line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    margin-bottom: ${Spacing.sm};
+  }
 `;
 
 const CardContainer = styled.div`
@@ -47,6 +74,18 @@ const CardContainer = styled.div`
   justify-content: center;
   margin: ${Spacing.lg} 0;
   flex-wrap: wrap;
+  
+  @media (max-width: 768px) {
+    gap: ${Spacing.sm};
+    margin: ${Spacing.md} 0;
+  }
+  
+  @media (max-width: 480px) {
+    gap: ${Spacing.xs};
+    margin: ${Spacing.sm} 0;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const PolicyCard = styled.div`
@@ -68,10 +107,25 @@ const PolicyCard = styled.div`
   position: relative;
   transform: ${props => props.selected ? 'scale(1.05) rotateY(5deg)' : 'scale(1)'};
   box-shadow: ${props => props.selected ? Shadows.glow : Shadows.medium};
+  
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 150px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 100px;
+    height: 130px;
+    transform: ${props => props.selected ? 'scale(1.02)' : 'scale(1)'};
+  }
 
   &:hover {
     transform: scale(1.05) rotateY(5deg);
     box-shadow: ${Shadows.glow};
+    
+    @media (max-width: 480px) {
+      transform: scale(1.02);
+    }
   }
   
   &::before {
@@ -99,6 +153,15 @@ const CardType = styled.div`
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   margin-bottom: ${Spacing.sm};
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: ${Spacing.xs};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const CardSymbol = styled.div`
@@ -106,6 +169,15 @@ const CardSymbol = styled.div`
   margin: ${Spacing.sm} 0;
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin: ${Spacing.xs} 0;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const DiscardButton = styled.button`
@@ -122,6 +194,21 @@ const DiscardButton = styled.button`
   box-shadow: ${Shadows.medium};
   position: relative;
   overflow: hidden;
+  margin-top: ${Spacing.md};
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.sm} ${Spacing.md};
+    font-size: 1.1rem;
+    margin-top: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+    font-size: 1rem;
+    margin-top: ${Spacing.xs};
+    width: 100%;
+    max-width: 200px;
+  }
 
   &::before {
     content: '';
@@ -164,6 +251,16 @@ const RoleReminder = styled.div`
   position: relative;
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    margin-top: ${Spacing.md};
+    padding: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    margin-top: ${Spacing.sm};
+    padding: ${Spacing.xs} ${Spacing.sm};
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -180,6 +277,15 @@ const RoleText = styled.p`
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
   
   strong {
     color: ${Colors.primary};

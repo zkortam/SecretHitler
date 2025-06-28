@@ -49,4 +49,21 @@ export const Transitions = {
   fast: 'all 0.2s ease',
   normal: 'all 0.3s ease',
   slow: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+};
+
+// Mobile-specific breakpoints
+export const Breakpoints = {
+  mobile: '480px',
+  tablet: '768px',
+  desktop: '1024px',
+  wide: '1200px'
+};
+
+// Mobile-specific spacing
+export const MobileSpacing = {
+  xs: '0.25rem',
+  sm: '0.5rem',
+  md: '0.75rem',
+  lg: '1rem',
+  xl: '1.5rem'
 }; 

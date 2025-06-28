@@ -13,6 +13,14 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    padding: ${Spacing.lg};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.md};
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -31,6 +39,15 @@ const Title = styled.h2`
   font-size: 1.8rem;
   font-weight: 700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const GovernmentInfo = styled.div`
@@ -39,6 +56,16 @@ const GovernmentInfo = styled.div`
   padding: ${Spacing.lg};
   margin: ${Spacing.md} 0;
   border: 1px solid ${Colors.glassBorder};
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.md};
+    margin: ${Spacing.sm} 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+    margin: ${Spacing.xs} 0;
+  }
 `;
 
 const GovernmentTitle = styled.h3`
@@ -47,6 +74,15 @@ const GovernmentTitle = styled.h3`
   margin-bottom: ${Spacing.md};
   color: ${Colors.primary};
   font-weight: 700;
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const GovernmentMember = styled.p`
@@ -54,6 +90,15 @@ const GovernmentMember = styled.p`
   font-size: 1.1rem;
   margin: ${Spacing.sm} 0;
   line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin: ${Spacing.xs} 0;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
   
   strong {
     color: ${Colors.primary};
@@ -67,6 +112,18 @@ const VoteButtons = styled.div`
   justify-content: center;
   margin: ${Spacing.xl} 0;
   flex-wrap: wrap;
+  
+  @media (max-width: 768px) {
+    gap: ${Spacing.md};
+    margin: ${Spacing.lg} 0;
+  }
+  
+  @media (max-width: 480px) {
+    gap: ${Spacing.sm};
+    margin: ${Spacing.md} 0;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const VoteButton = styled.button`
@@ -86,6 +143,20 @@ const VoteButton = styled.button`
   min-width: 140px;
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.md} ${Spacing.lg};
+    font-size: 1.2rem;
+    min-width: 120px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm} ${Spacing.md};
+    font-size: 1.1rem;
+    min-width: 100px;
+    width: 100%;
+    max-width: 200px;
+  }
 
   &::before {
     content: '';
@@ -131,6 +202,16 @@ const VoteStatus = styled.div`
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   border-radius: ${BorderRadius.medium};
   border: 1px solid ${Colors.glassBorder};
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.md};
+    margin: ${Spacing.sm} 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+    margin: ${Spacing.xs} 0;
+  }
 `;
 
 const VoteStatusText = styled.p`
@@ -138,6 +219,15 @@ const VoteStatusText = styled.p`
   font-size: 1.1rem;
   margin: ${Spacing.sm} 0;
   line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin: ${Spacing.xs} 0;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
   
   strong {
     color: ${Colors.primary};
@@ -151,6 +241,11 @@ const VoteProgress = styled.div`
   background: rgba(255, 255, 255, 0.05);
   border-radius: ${BorderRadius.medium};
   border: 1px solid ${Colors.glassBorder};
+  
+  @media (max-width: 768px) {
+    margin-top: ${Spacing.sm};
+    padding: ${Spacing.xs};
+  }
 `;
 
 const ProgressBar = styled.div`
@@ -160,6 +255,11 @@ const ProgressBar = styled.div`
   border-radius: 4px;
   overflow: hidden;
   margin-top: ${Spacing.sm};
+  
+  @media (max-width: 768px) {
+    height: 6px;
+    margin-top: ${Spacing.xs};
+  }
 `;
 
 const ProgressFill = styled.div`
@@ -176,6 +276,16 @@ const Question = styled.p`
   margin: ${Spacing.lg} 0;
   font-weight: 600;
   color: ${Colors.light};
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin: ${Spacing.md} 0;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    margin: ${Spacing.sm} 0;
+  }
 `;
 
 const DeadMessage = styled.div`
@@ -184,6 +294,16 @@ const DeadMessage = styled.div`
   border-radius: ${BorderRadius.medium};
   padding: ${Spacing.lg};
   margin: ${Spacing.md} 0;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.md};
+    margin: ${Spacing.sm} 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+    margin: ${Spacing.xs} 0;
+  }
 `;
 
 const LoadingMessage = styled.div`
@@ -191,6 +311,16 @@ const LoadingMessage = styled.div`
   font-size: 1.1rem;
   opacity: 0.8;
   padding: ${Spacing.lg};
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: ${Spacing.sm};
+  }
 `;
 
 const VotingPhase = ({ gameState, playerId, onVote, voteResult }) => {

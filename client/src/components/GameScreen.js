@@ -26,12 +26,25 @@ const Container = styled.div`
     gap: ${Spacing.md};
     padding: ${Spacing.md};
   }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+    gap: ${Spacing.sm};
+  }
 `;
 
 const Header = styled.div`
   text-align: center;
   margin-bottom: ${Spacing.lg};
   grid-column: 1 / -1;
+  
+  @media (max-width: 768px) {
+    margin-bottom: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    margin-bottom: ${Spacing.sm};
+  }
 `;
 
 const Title = styled.h1`
@@ -42,6 +55,16 @@ const Title = styled.h1`
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+    margin-bottom: ${Spacing.xs};
+  }
 `;
 
 const GamePhase = styled.div`
@@ -55,6 +78,11 @@ const GamePhase = styled.div`
   box-shadow: ${Shadows.large};
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.sm};
+    margin-bottom: ${Spacing.xs};
+  }
   
   &::before {
     content: '';
@@ -73,6 +101,15 @@ const PhaseTitle = styled.h3`
   margin-bottom: ${Spacing.sm};
   color: ${Colors.primary};
   font-weight: 700;
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: ${Spacing.xs};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const PhaseInfo = styled.div`
@@ -82,6 +119,16 @@ const PhaseInfo = styled.div`
   gap: ${Spacing.md};
   flex-wrap: wrap;
   margin-top: ${Spacing.sm};
+  
+  @media (max-width: 768px) {
+    gap: ${Spacing.sm};
+    margin-top: ${Spacing.xs};
+  }
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: ${Spacing.xs};
+  }
 `;
 
 const FailedElections = styled.div`
@@ -92,6 +139,16 @@ const FailedElections = styled.div`
   font-family: ${Typography.body};
   font-weight: 600;
   color: ${Colors.danger};
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.xs} ${Spacing.sm};
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.xs};
+    font-size: 0.85rem;
+  }
 `;
 
 const CurrentPresident = styled.div`
@@ -103,6 +160,16 @@ const CurrentPresident = styled.div`
   font-weight: 600;
   color: ${Colors.primary};
   position: relative;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.xs} ${Spacing.sm};
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.xs};
+    font-size: 0.85rem;
+  }
   
   &::before {
     content: '';
@@ -121,12 +188,24 @@ const YouIndicator = styled.span`
   margin-left: ${Spacing.sm};
   font-weight: 700;
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  
+  @media (max-width: 480px) {
+    margin-left: ${Spacing.xs};
+  }
 `;
 
 const MainArea = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${Spacing.md};
+  
+  @media (max-width: 768px) {
+    gap: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    gap: ${Spacing.xs};
+  }
 `;
 
 const Sidebar = styled.div`
@@ -136,6 +215,16 @@ const Sidebar = styled.div`
   position: sticky;
   top: ${Spacing.lg};
   height: fit-content;
+  
+  @media (max-width: 768px) {
+    gap: ${Spacing.md};
+    position: static;
+    order: -1;
+  }
+  
+  @media (max-width: 480px) {
+    gap: ${Spacing.sm};
+  }
 `;
 
 const VoteResult = styled.div`
@@ -149,6 +238,14 @@ const VoteResult = styled.div`
   box-shadow: ${Shadows.large};
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+  }
   
   &::before {
     content: '';
@@ -167,6 +264,15 @@ const VoteResultTitle = styled.h3`
   margin-bottom: ${Spacing.md};
   color: ${props => props.$passed ? Colors.success : Colors.danger};
   font-weight: 700;
+  
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const VoteStats = styled.p`
@@ -174,6 +280,14 @@ const VoteStats = styled.p`
   font-size: 1.2rem;
   margin-bottom: ${Spacing.sm};
   font-weight: 600;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const VoteOutcome = styled.p`
@@ -181,6 +295,14 @@ const VoteOutcome = styled.p`
   font-size: 1.1rem;
   font-weight: 700;
   color: ${props => props.$passed ? Colors.success : Colors.danger};
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 `;
 
 const LoadingState = styled.div`
@@ -189,6 +311,16 @@ const LoadingState = styled.div`
   font-family: ${Typography.body};
   font-size: 1.1rem;
   opacity: 0.8;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.lg};
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.md};
+    font-size: 0.95rem;
+  }
 `;
 
 const ErrorState = styled.div`
@@ -197,6 +329,16 @@ const ErrorState = styled.div`
   font-family: ${Typography.body};
   font-size: 1.1rem;
   color: ${Colors.danger};
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.lg};
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.md};
+    font-size: 0.95rem;
+  }
 `;
 
 const GameScreen = ({ gameState, playerRole, playerId, socket }) => {

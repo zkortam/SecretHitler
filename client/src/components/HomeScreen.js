@@ -7,6 +7,14 @@ const Container = styled.div`
   width: 100%;
   text-align: center;
   padding: ${Spacing.lg};
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+  }
 `;
 
 const Title = styled.h1`
@@ -20,6 +28,12 @@ const Title = styled.h1`
   
   @media (max-width: 768px) {
     font-size: 3rem;
+    letter-spacing: 1px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+    margin-bottom: ${Spacing.xs};
   }
 `;
 
@@ -30,6 +44,16 @@ const Subtitle = styled.p`
   margin-bottom: ${Spacing.xl};
   opacity: 0.9;
   line-height: 1.6;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: ${Spacing.lg};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    margin-bottom: ${Spacing.md};
+  }
 `;
 
 const CardsContainer = styled.div`
@@ -41,6 +65,12 @@ const CardsContainer = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: ${Spacing.lg};
+    margin-bottom: ${Spacing.lg};
+  }
+  
+  @media (max-width: 480px) {
+    gap: ${Spacing.md};
+    margin-bottom: ${Spacing.md};
   }
 `;
 
@@ -54,6 +84,16 @@ const Card = styled.div`
   box-shadow: ${Shadows.large};
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.lg};
+    margin-bottom: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.md};
+    margin-bottom: ${Spacing.sm};
+  }
   
   &::before {
     content: '';
@@ -72,6 +112,14 @@ const CardTitle = styled.h2`
   font-weight: 700;
   margin-bottom: ${Spacing.sm};
   color: ${Colors.primary};
+  
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const CardDescription = styled.p`
@@ -80,6 +128,15 @@ const CardDescription = styled.p`
   margin-bottom: ${Spacing.md};
   opacity: 0.9;
   line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 `;
 
 const Button = styled.button`
@@ -97,6 +154,17 @@ const Button = styled.button`
   box-shadow: ${Shadows.medium};
   position: relative;
   overflow: hidden;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding: ${Spacing.sm} ${Spacing.md};
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+    font-size: 0.95rem;
+  }
 
   &::before {
     content: '';
@@ -143,6 +211,16 @@ const Input = styled.input`
   backdrop-filter: blur(10px);
   transition: ${Transitions.normal};
 
+  @media (max-width: 768px) {
+    padding: ${Spacing.sm};
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.xs} ${Spacing.sm};
+    font-size: 0.9rem;
+  }
+
   &::placeholder {
     color: rgba(255, 255, 255, 0.7);
   }
@@ -160,6 +238,16 @@ const GameCodeInput = styled(Input)`
   font-weight: bold;
   text-align: center;
   font-size: 1.2rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
 `;
 
 const HowToPlay = styled.div`
@@ -169,6 +257,16 @@ const HowToPlay = styled.div`
   border-radius: ${BorderRadius.medium};
   padding: ${Spacing.lg};
   border: 1px solid ${Colors.glassBorder};
+  
+  @media (max-width: 768px) {
+    margin-top: ${Spacing.lg};
+    padding: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    margin-top: ${Spacing.md};
+    padding: ${Spacing.sm};
+  }
 `;
 
 const HowToPlayTitle = styled.h3`
@@ -176,6 +274,15 @@ const HowToPlayTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: ${Spacing.md};
   color: ${Colors.primary};
+  
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const HowToPlayList = styled.ul`
@@ -192,6 +299,17 @@ const HowToPlayItem = styled.li`
   padding-left: ${Spacing.md};
   position: relative;
   line-height: 1.6;
+  
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    margin-bottom: ${Spacing.xs};
+    padding-left: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
   
   &::before {
     content: '•';

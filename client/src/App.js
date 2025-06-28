@@ -16,6 +16,18 @@ const AppContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px;
+  
+  @media (max-width: 768px) {
+    padding: 10px;
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 8px;
+  }
 `;
 
 const App = () => {

@@ -18,6 +18,14 @@ const Board = styled.div`
   position: relative;
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    padding: ${Spacing.lg};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.md};
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -37,6 +45,16 @@ const Title = styled.h2`
   font-size: 2rem;
   font-weight: 700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    margin-bottom: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+    margin-bottom: ${Spacing.sm};
+  }
 `;
 
 const PolicyTrack = styled.div`
@@ -48,6 +66,12 @@ const PolicyTrack = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     gap: ${Spacing.md};
+    margin-bottom: ${Spacing.lg};
+  }
+  
+  @media (max-width: 480px) {
+    gap: ${Spacing.sm};
+    margin-bottom: ${Spacing.md};
   }
 `;
 
@@ -58,6 +82,14 @@ const PolicyColumn = styled.div`
   background: rgba(255, 255, 255, 0.05);
   border-radius: ${BorderRadius.medium};
   border: 1px solid ${Colors.glassBorder};
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.xs} ${Spacing.sm};
+  }
 `;
 
 const PolicyType = styled.h3`
@@ -67,6 +99,16 @@ const PolicyType = styled.h3`
   font-size: 1.3rem;
   font-weight: 700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+    margin-bottom: ${Spacing.xs};
+  }
 `;
 
 const PolicySlots = styled.div`
@@ -74,6 +116,16 @@ const PolicySlots = styled.div`
   flex-direction: column;
   gap: ${Spacing.xs};
   align-items: center;
+  
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: ${Spacing.xs};
+  }
+  
+  @media (max-width: 480px) {
+    gap: ${Spacing.xs};
+  }
 `;
 
 const PolicySlot = styled.div`
@@ -92,6 +144,18 @@ const PolicySlot = styled.div`
   color: white;
   position: relative;
   transition: ${Transitions.slow};
+  
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+  
+  @media (max-width: 480px) {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+  }
   
   ${props => props.$filled && css`
     animation: ${policyEnacted} 0.6s ease-out;
@@ -124,12 +188,31 @@ const PolicyCount = styled.p`
   font-weight: 600;
   margin-top: ${Spacing.sm};
   color: ${Colors.light};
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-top: ${Spacing.xs};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 `;
 
 const ExecutivePowers = styled.div`
   margin-top: ${Spacing.lg};
   padding-top: ${Spacing.md};
   border-top: 2px solid ${Colors.glassBorder};
+  
+  @media (max-width: 768px) {
+    margin-top: ${Spacing.md};
+    padding-top: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    margin-top: ${Spacing.sm};
+    padding-top: ${Spacing.xs};
+  }
 `;
 
 const ExecutivePowersTitle = styled.h3`
@@ -138,6 +221,16 @@ const ExecutivePowersTitle = styled.h3`
   margin-bottom: ${Spacing.md};
   color: ${Colors.primary};
   text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+    margin-bottom: ${Spacing.xs};
+  }
 `;
 
 const PowerList = styled.div`
@@ -145,6 +238,10 @@ const PowerList = styled.div`
   flex-wrap: wrap;
   gap: ${Spacing.sm};
   justify-content: center;
+  
+  @media (max-width: 768px) {
+    gap: ${Spacing.xs};
+  }
 `;
 
 const PowerBadge = styled.div`
@@ -181,6 +278,17 @@ const PowerBadge = styled.div`
   cursor: help;
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+    padding: ${Spacing.xs} ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    padding: ${Spacing.xs};
+    border-radius: 20px;
+  }
   
   &::before {
     content: '';

@@ -12,6 +12,14 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    padding: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -30,6 +38,15 @@ const Title = styled.h3`
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const PlayerItem = styled.div`
@@ -55,6 +72,18 @@ const PlayerItem = styled.div`
   transition: ${Transitions.normal};
   opacity: ${props => props.$isDead ? 0.5 : 1};
   cursor: ${props => props.$selectable ? 'pointer' : 'default'};
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.sm} ${Spacing.md};
+    margin: ${Spacing.xs} 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+    flex-direction: column;
+    align-items: flex-start;
+    gap: ${Spacing.xs};
+  }
   
   &::before {
     content: '';
@@ -84,6 +113,11 @@ const PlayerInfo = styled.div`
   align-items: center;
   gap: ${Spacing.md};
   flex: 1;
+  
+  @media (max-width: 480px) {
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
 const PlayerAvatar = styled.div`
@@ -112,12 +146,28 @@ const PlayerAvatar = styled.div`
     if (props.$isCurrentPlayer) return Colors.info;
     return 'transparent';
   }};
+  
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
 `;
 
 const PlayerDetails = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${Spacing.xs};
+  
+  @media (max-width: 480px) {
+    flex: 1;
+  }
 `;
 
 const PlayerName = styled.span`
@@ -125,12 +175,24 @@ const PlayerName = styled.span`
   font-weight: ${props => props.$isCurrentPlayer ? '700' : '600'};
   color: ${props => props.$isCurrentPlayer ? Colors.primary : Colors.light};
   font-size: 1.1rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 `;
 
 const StatusBadges = styled.div`
   display: flex;
   gap: ${Spacing.xs};
   flex-wrap: wrap;
+  
+  @media (max-width: 480px) {
+    gap: ${Spacing.xs};
+  }
 `;
 
 const Badge = styled.span`
@@ -161,6 +223,11 @@ const Badge = styled.span`
       default: return 'transparent';
     }
   }};
+  
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+  }
 `;
 
 const SelectButton = styled.button`
@@ -177,6 +244,18 @@ const SelectButton = styled.button`
   box-shadow: ${Shadows.small};
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.xs} ${Spacing.sm};
+    font-size: 0.85rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.xs};
+    font-size: 0.8rem;
+    width: 100%;
+    margin-top: ${Spacing.xs};
+  }
 
   &::before {
     content: '';

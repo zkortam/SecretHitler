@@ -7,11 +7,27 @@ const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: ${Spacing.lg};
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+  }
 `;
 
 const Header = styled.div`
   text-align: center;
   margin-bottom: ${Spacing.xl};
+  
+  @media (max-width: 768px) {
+    margin-bottom: ${Spacing.lg};
+  }
+  
+  @media (max-width: 480px) {
+    margin-bottom: ${Spacing.md};
+  }
 `;
 
 const Title = styled.h1`
@@ -22,6 +38,16 @@ const Title = styled.h1`
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    margin-bottom: ${Spacing.xs};
+  }
 `;
 
 const GameCode = styled.div`
@@ -35,6 +61,16 @@ const GameCode = styled.div`
   text-align: center;
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.lg};
+    margin-bottom: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.md};
+    margin-bottom: ${Spacing.sm};
+  }
   
   &::before {
     content: '';
@@ -53,6 +89,15 @@ const CodeTitle = styled.h2`
   margin-bottom: ${Spacing.md};
   color: ${Colors.primary};
   font-weight: 700;
+  
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    margin-bottom: ${Spacing.sm};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const CodeDisplay = styled.div`
@@ -70,6 +115,13 @@ const CodeDisplay = styled.div`
     letter-spacing: 1rem;
     padding-left: 1rem;
   }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    padding-left: 0.5rem;
+    margin: ${Spacing.sm} 0;
+  }
 `;
 
 const CodeDescription = styled.p`
@@ -77,6 +129,14 @@ const CodeDescription = styled.p`
   font-size: 1.1rem;
   opacity: 0.9;
   line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 `;
 
 const PlayerList = styled.div`
@@ -88,6 +148,14 @@ const PlayerList = styled.div`
   box-shadow: ${Shadows.large};
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.lg};
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.md};
+  }
   
   &::before {
     content: '';
@@ -107,6 +175,16 @@ const PlayerListTitle = styled.h2`
   color: ${Colors.primary};
   font-weight: 700;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+    margin-bottom: ${Spacing.md};
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+    margin-bottom: ${Spacing.sm};
+  }
 `;
 
 const PlayerItem = styled.div`
@@ -124,6 +202,18 @@ const PlayerItem = styled.div`
   transition: ${Transitions.normal};
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.sm} ${Spacing.md};
+    margin: ${Spacing.xs} 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm};
+    flex-direction: column;
+    align-items: flex-start;
+    gap: ${Spacing.xs};
+  }
   
   &::before {
     content: '';
@@ -145,6 +235,11 @@ const PlayerInfo = styled.div`
   display: flex;
   align-items: center;
   gap: ${Spacing.md};
+  
+  @media (max-width: 480px) {
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
 const PlayerAvatar = styled.div`
@@ -160,6 +255,12 @@ const PlayerAvatar = styled.div`
   font-size: 1rem;
   font-family: ${Typography.body};
   box-shadow: ${Shadows.small};
+  
+  @media (max-width: 480px) {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
 `;
 
 const PlayerName = styled.span`
@@ -167,6 +268,14 @@ const PlayerName = styled.span`
   font-size: 1.2rem;
   font-weight: ${props => props.$isHost ? '700' : '600'};
   color: ${props => props.$isHost ? Colors.primary : Colors.light};
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const HostBadge = styled.span`
@@ -179,6 +288,11 @@ const HostBadge = styled.span`
   font-family: ${Typography.body};
   box-shadow: ${Shadows.small};
   border: 1px solid ${Colors.primary};
+  
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+    padding: ${Spacing.xs};
+  }
 `;
 
 const Button = styled.button`
@@ -198,6 +312,18 @@ const Button = styled.button`
   overflow: hidden;
   width: 100%;
   max-width: 400px;
+  
+  @media (max-width: 768px) {
+    padding: ${Spacing.sm} ${Spacing.xl};
+    font-size: 1.2rem;
+    margin: 0.5rem 0 ${Spacing.md} 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: ${Spacing.sm} ${Spacing.lg};
+    font-size: 1.1rem;
+    margin: 0.5rem 0 ${Spacing.sm} 0;
+  }
 
   &::before {
     content: '';
