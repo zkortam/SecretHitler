@@ -279,14 +279,6 @@ io.on('connection', (socket) => {
 });
 
 const PORT = process.env.PORT || 3001;
-
-// For Vercel deployment, we need to export the app
-if (process.env.NODE_ENV === 'production') {
-  // In production (Vercel), we export the app for serverless functions
-  module.exports = app;
-} else {
-  // In development, we start the server normally
-  server.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-} 
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+}); 
