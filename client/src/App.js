@@ -7,6 +7,8 @@ import GameScreen from './components/GameScreen';
 import RoleScreen from './components/RoleScreen';
 import GameOverScreen from './components/GameOverScreen';
 
+const BACKEND_URL = 'https://secrethitler-yqch.onrender.com';
+
 const AppContainer = styled.div`
   min-height: 100vh;
   display: flex;
@@ -25,7 +27,7 @@ const App = () => {
   const [gameOver, setGameOver] = useState(null);
 
   useEffect(() => {
-    const newSocket = io();
+    const newSocket = io(BACKEND_URL);
     setSocket(newSocket);
 
     newSocket.on('connect', () => {
@@ -86,7 +88,7 @@ const App = () => {
     }
     
     try {
-      const response = await fetch('/api/games', {
+      const response = await fetch(`${BACKEND_URL}/api/games`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
